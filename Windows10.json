@@ -1,0 +1,54 @@
+{
+  "builders": [
+    {
+      "communicator": "ssh",
+      "disk_size": 80000,
+      "floppy_files": [
+        "Scripts/Autounattend.xml",
+        "Scripts/winrmConfig.bat"
+      ],
+      "guest_additions_mode": "upload",
+      "guest_additions_path": "c:/Windows/Temp/windows.iso",
+      "guest_os_type": "Windows10_64",
+      "hard_drive_interface": "sata",
+      "headless": true,
+      "iso_checksum": "sha256:{{user `iso_sha256`}}",
+      "iso_interface": "sata",
+      "iso_url": "{{user `iso_path`}}",
+      "shutdown_command": "shutdown /s /t 0 /f /d p:4:1 /c \"Packer Shutdown\"",
+      "type": "virtualbox-vm",
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--memory",
+          "2048"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--cpus",
+          "2"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--vram",
+          "32"
+        ]
+      ],
+      "winrm_insecure": true,
+      "winrm_password": "vagrant",
+      "winrm_timeout": "1h",
+      "winrm_username": "Administrator",
+      "ssh_username": "Administrator",
+      "ssh_password": "vagrant",
+      "ssh_timeout": "1h"
+    }
+  ],
+  "variables": {
+    "iso_path": "Win10_21H1_English_x64.iso",
+    "iso_sha256": "6911e839448fa999b07c321fc70e7408fe122214f5c4e80a9ccc64d22d0d85ea"
+  }
+}
+

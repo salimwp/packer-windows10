@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+   <settings pass="windowsPE">
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <SetupUILanguage>
+            <UILanguage>en-US</UILanguage>
+         </SetupUILanguage>
+         <InputLocale>0409:00000409</InputLocale>
+         <SystemLocale>en-US</SystemLocale>
+         <UILanguage>en-US</UILanguage>
+         <UILanguageFallback>en-US</UILanguageFallback>
+         <UserLocale>en-US</UserLocale>
+      </component>
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <SetupUILanguage>
+            <UILanguage>en-US</UILanguage>
+         </SetupUILanguage>
+         <InputLocale>0409:00000409</InputLocale>
+         <SystemLocale>en-US</SystemLocale>
+         <UILanguage>en-US</UILanguage>
+         <UILanguageFallback>en-US</UILanguageFallback>
+         <UserLocale>en-US</UserLocale>
+      </component>
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Setup" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <DiskConfiguration>
+            <Disk wcm:action="add">
+               <CreatePartitions>
+                  <CreatePartition wcm:action="add">
+                     <Order>1</Order>
+                     <Type>Primary</Type>
+                     <Size>100</Size>
+                  </CreatePartition>
+                  <CreatePartition wcm:action="add">
+                     <Extend>true</Extend>
+                     <Order>2</Order>
+                     <Type>Primary</Type>
+                  </CreatePartition>
+               </CreatePartitions>
+               <ModifyPartitions>
+                  <ModifyPartition wcm:action="add">
+                     <Active>true</Active>
+                     <Format>NTFS</Format>
+                     <Label>System Reserved</Label>
+                     <Order>1</Order>
+                     <PartitionID>1</PartitionID>
+                     <TypeID>0x27</TypeID>
+                  </ModifyPartition>
+                  <ModifyPartition wcm:action="add">
+                     <Active>true</Active>
+                     <Format>NTFS</Format>
+                     <Label>OS</Label>
+                     <Letter>C</Letter>
+                     <Order>2</Order>
+                     <PartitionID>2</PartitionID>
+                  </ModifyPartition>
+               </ModifyPartitions>
+               <DiskID>0</DiskID>
+               <WillWipeDisk>true</WillWipeDisk>
+            </Disk>
+         </DiskConfiguration>
+         <ImageInstall>
+            <OSImage>
+               <InstallTo>
+                  <DiskID>0</DiskID>
+                  <PartitionID>2</PartitionID>
+               </InstallTo>
+               <InstallToAvailablePartition>false</InstallToAvailablePartition>
+            </OSImage>
+         </ImageInstall>
+         <UserData>
+            <AcceptEula>true</AcceptEula>
+            <FullName>vagrant</FullName>
+            <Organization>vagrant</Organization>
+            <ProductKey>
+               <Key>W269N-WFGWX-YVC9B-4J6C9-T83GX</Key>
+            </ProductKey>
+         </UserData>
+      </component>
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <DiskConfiguration>
+            <Disk wcm:action="add">
+               <CreatePartitions>
+                  <CreatePartition wcm:action="add">
+                     <Order>1</Order>
+                     <Type>Primary</Type>
+                     <Size>100</Size>
+                  </CreatePartition>
+                  <CreatePartition wcm:action="add">
+                     <Extend>true</Extend>
+                     <Order>2</Order>
+                     <Type>Primary</Type>
+                  </CreatePartition>
+               </CreatePartitions>
+               <ModifyPartitions>
+                  <ModifyPartition wcm:action="add">
+                     <Active>true</Active>
+                     <Format>NTFS</Format>
+                     <Label>System Reserved</Label>
+                     <Order>1</Order>
+                     <PartitionID>1</PartitionID>
+                     <TypeID>0x27</TypeID>
+                  </ModifyPartition>
+                  <ModifyPartition wcm:action="add">
+                     <Active>true</Active>
+                     <Format>NTFS</Format>
+                     <Label>OS</Label>
+                     <Letter>C</Letter>
+                     <Order>2</Order>
+                     <PartitionID>2</PartitionID>
+                  </ModifyPartition>
+               </ModifyPartitions>
+               <DiskID>0</DiskID>
+               <WillWipeDisk>true</WillWipeDisk>
+            </Disk>
+         </DiskConfiguration>
+         <ImageInstall>
+            <OSImage>
+               <InstallTo>
+                  <DiskID>0</DiskID>
+                  <PartitionID>2</PartitionID>
+               </InstallTo>
+               <InstallToAvailablePartition>false</InstallToAvailablePartition>
+            </OSImage>
+         </ImageInstall>
+         <UserData>
+            <AcceptEula>true</AcceptEula>
+            <FullName>vagrant</FullName>
+            <Organization>vagrant</Organization>
+            <ProductKey>
+               <Key>W269N-WFGWX-YVC9B-4J6C9-T83GX</Key>
+            </ProductKey>
+         </UserData>
+      </component>
+   </settings>
+   <settings pass="offlineServicing">
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-LUA-Settings" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <EnableLUA>false</EnableLUA>
+      </component>
+   </settings>
+   <settings pass="offlineServicing">
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-LUA-Settings" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <EnableLUA>false</EnableLUA>
+      </component>
+   </settings>
+   <settings pass="generalize">
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Security-SPP" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <SkipRearm>1</SkipRearm>
+      </component>
+   </settings>
+   <settings pass="generalize">
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Security-SPP" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <SkipRearm>1</SkipRearm>
+      </component>
+   </settings>
+   <settings pass="specialize">
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-International-Core" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <InputLocale>0409:00000409</InputLocale>
+         <SystemLocale>en-US</SystemLocale>
+         <UILanguage>en-US</UILanguage>
+         <UILanguageFallback>en-US</UILanguageFallback>
+         <UserLocale>en-US</UserLocale>
+      </component>
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <InputLocale>0409:00000409</InputLocale>
+         <SystemLocale>en-US</SystemLocale>
+         <UILanguage>en-US</UILanguage>
+         <UILanguageFallback>en-US</UILanguageFallback>
+         <UserLocale>en-US</UserLocale>
+      </component>
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Security-SPP-UX" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <SkipAutoActivation>true</SkipAutoActivation>
+      </component>
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Security-SPP-UX" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <SkipAutoActivation>true</SkipAutoActivation>
+      </component>
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-SQMApi" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <CEIPEnabled>0</CEIPEnabled>
+      </component>
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-SQMApi" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <CEIPEnabled>0</CEIPEnabled>
+      </component>
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Shell-Setup" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <ComputerName>vagrant</ComputerName>
+         <ProductKey>W269N-WFGWX-YVC9B-4J6C9-T83GX</ProductKey>
+      </component>
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <ComputerName>vagrant</ComputerName>
+         <ProductKey>W269N-WFGWX-YVC9B-4J6C9-T83GX</ProductKey>
+      </component>
+   </settings>
+   <settings pass="oobeSystem">
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Shell-Setup" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <AutoLogon>
+            <Password>
+               <Value>vagrant</Value>
+               <PlainText>true</PlainText>
+            </Password>
+            <Enabled>true</Enabled>
+            <Username>Administrator</Username>
+         </AutoLogon>
+         <OOBE>
+            <HideEULAPage>true</HideEULAPage>
+            <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
+            <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+            <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+            <NetworkLocation>Other</NetworkLocation>
+            <SkipUserOOBE>true</SkipUserOOBE>
+            <SkipMachineOOBE>true</SkipMachineOOBE>
+            <ProtectYourPC>1</ProtectYourPC>
+         </OOBE>
+         <UserAccounts>
+            <AdministratorPassword>
+               <Value>vagrant</Value>
+               <PlainText>true</PlainText>
+            </AdministratorPassword>
+            <LocalAccounts>
+               <LocalAccount wcm:action="add">
+                  <Password>
+                     <Value>vagrant</Value>
+                     <PlainText>true</PlainText>
+                  </Password>
+                  <Description />
+                  <DisplayName>vagrant</DisplayName>
+                  <Group>Administrators</Group>
+                  <Name>vagrant</Name>
+               </LocalAccount>
+            </LocalAccounts>
+         </UserAccounts>
+         <RegisteredOrganization>vagrant</RegisteredOrganization>
+         <RegisteredOwner>vagrant</RegisteredOwner>
+         <DisableAutoDaylightTimeSet>false</DisableAutoDaylightTimeSet>
+         <FirstLogonCommands>
+            <SynchronousCommand wcm:action="add">
+               <Description>Control Panel View</Description>
+               <Order>1</Order>
+               <CommandLine>reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel" /v StartupPage /t REG_DWORD /d 1 /f</CommandLine>
+               <RequiresUserInput>true</RequiresUserInput>
+            </SynchronousCommand>
+            <SynchronousCommand wcm:action="add">
+               <Order>2</Order>
+               <Description>Control Panel Icon Size</Description>
+               <RequiresUserInput>false</RequiresUserInput>
+               <CommandLine>reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel" /v AllItemsIconView /t REG_DWORD /d 0 /f</CommandLine>
+            </SynchronousCommand>
+            <SynchronousCommand wcm:action="add">
+               <Order>3</Order>
+               <RequiresUserInput>false</RequiresUserInput>
+               <CommandLine>cmd /C wmic useraccount where name="vagrant" set PasswordExpires=false</CommandLine>
+               <Description>Password Never Expires</Description>
+            </SynchronousCommand>
+            <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c winrm quickconfig -q</CommandLine>
+                    <Description>winrm quickconfig -q</Description>
+                    <Order>4</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c winrm quickconfig -transport:http</CommandLine>
+                    <Description>winrm quickconfig -transport:http</Description>
+                    <Order>5</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c winrm set winrm/config @{MaxTimeoutms="1800000"}</CommandLine>
+                    <Description>Win RM MaxTimoutms</Description>
+                    <Order>6</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c winrm set winrm/config/winrs @{MaxMemoryPerShellMB="800"}</CommandLine>
+                    <Description>Win RM MaxMemoryPerShellMB</Description>
+                    <Order>7</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c winrm set winrm/config/service @{AllowUnencrypted="true"}</CommandLine>
+                    <Description>Win RM AllowUnencrypted</Description>
+                    <Order>8</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c winrm set winrm/config/service/auth @{Basic="true"}</CommandLine>
+                    <Description>Win RM auth Basic</Description>
+                    <Order>9</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c winrm set winrm/config/client/auth @{Basic="true"}</CommandLine>
+                    <Description>Win RM client auth Basic</Description>
+                    <Order>10</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c winrm set winrm/config/listener?Address=*+Transport=HTTP @{Port="5985"} </CommandLine>
+                    <Description>Win RM listener Address/Port</Description>
+                    <Order>11</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c netsh advfirewall firewall set rule group="remote administration" new enable=yes </CommandLine>
+                    <Description>Win RM adv firewall enable</Description>
+                    <Order>12</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c netsh firewall add portopening TCP 5985 "Port 5985" </CommandLine>
+                    <Description>Win RM port open</Description>
+                    <Order>13</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c net stop winrm </CommandLine>
+                    <Description>Stop Win RM Service </Description>
+                    <Order>14</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c sc config winrm start= auto</CommandLine>
+                    <Description>Win RM Autostart</Description>
+                    <Order>15</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c net start winrm</CommandLine>
+                    <Description>Start Win RM Service</Description>
+                    <Order>16</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+            <SynchronousCommand wcm:action="add">
+               <CommandLine>powershell -NoLogo -ExecutionPolicy RemoteSigned -File a:\enable-winrm.ps1</CommandLine>
+               <Description>Enabling winrm</Description>
+               <Order>17</Order>
+               <RequiresUserInput>false</RequiresUserInput>
+            </SynchronousCommand>
+         </FirstLogonCommands>
+         <TimeZone>Eastern Standard Time</TimeZone>
+      </component>
+      <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+         <AutoLogon>
+            <Password>
+               <Value>vagrant</Value>
+               <PlainText>true</PlainText>
+            </Password>
+            <Enabled>true</Enabled>
+            <Username>Administrator</Username>
+         </AutoLogon>
+         <OOBE>
+            <HideEULAPage>true</HideEULAPage>
+            <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
+            <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+            <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+            <NetworkLocation>Other</NetworkLocation>
+            <SkipUserOOBE>true</SkipUserOOBE>
+            <SkipMachineOOBE>true</SkipMachineOOBE>
+            <ProtectYourPC>1</ProtectYourPC>
+         </OOBE>
+         <UserAccounts>
+            <AdministratorPassword>
+               <Value>vagrant</Value>
+               <PlainText>true</PlainText>
+            </AdministratorPassword>
+            <LocalAccounts>
+               <LocalAccount wcm:action="add">
+                  <Password>
+                     <Value>vagrant</Value>
+                     <PlainText>true</PlainText>
+                  </Password>
+                  <Description />
+                  <DisplayName>vagrant</DisplayName>
+                  <Group>Administrators</Group>
+                  <Name>vagrant</Name>
+               </LocalAccount>
+            </LocalAccounts>
+         </UserAccounts>
+         <RegisteredOrganization>vagrant</RegisteredOrganization>
+         <RegisteredOwner>vagrant</RegisteredOwner>
+         <DisableAutoDaylightTimeSet>false</DisableAutoDaylightTimeSet>
+         <FirstLogonCommands>
+            <SynchronousCommand wcm:action="add">
+               <Description>Control Panel View</Description>
+               <Order>1</Order>
+               <CommandLine>reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel" /v StartupPage /t REG_DWORD /d 1 /f</CommandLine>
+               <RequiresUserInput>true</RequiresUserInput>
+            </SynchronousCommand>
+            <SynchronousCommand wcm:action="add">
+               <Order>2</Order>
+               <Description>Control Panel Icon Size</Description>
+               <RequiresUserInput>false</RequiresUserInput>
+               <CommandLine>reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel" /v AllItemsIconView /t REG_DWORD /d 0 /f</CommandLine>
+            </SynchronousCommand>
+            <SynchronousCommand wcm:action="add">
+               <Order>3</Order>
+               <RequiresUserInput>false</RequiresUserInput>
+               <CommandLine>cmd /C wmic useraccount where name="vagrant" set PasswordExpires=false</CommandLine>
+               <Description>Password Never Expires</Description>
+            </SynchronousCommand>
+            <SynchronousCommand wcm:action="add">
+               <Order>4</Order>
+               <RequiresUserInput>false</RequiresUserInput>
+               <CommandLine>powershell -command "Set-WSManQuickConfig -Force -SkipNetworkProfileCheck"</CommandLine>
+               <Description>Password Never Expires</Description>
+            </SynchronousCommand>
+            <SynchronousCommand wcm:action="add">
+               <Order>5</Order>
+               <RequiresUserInput>false</RequiresUserInput>
+               <CommandLine>powershell -command "Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0"</CommandLine>
+               <Description>Password Never Expires</Description>
+            </SynchronousCommand>
+            <SynchronousCommand wcm:action="add">
+               <Order>7</Order>
+               <RequiresUserInput>false</RequiresUserInput>
+               <CommandLine>powershell -command "Start-Service sshd"</CommandLine>
+               <Description>Password Never Expires</Description>
+            </SynchronousCommand>
+            <SynchronousCommand wcm:action="add">
+               <Order>8</Order>
+               <RequiresUserInput>false</RequiresUserInput>
+               <CommandLine>powershell -command "Set-Service -Name sshd -StartupType 'Automatic'"</CommandLine>
+               <Description>Password Never Expires</Description>
+            </SynchronousCommand>
+         </FirstLogonCommands>
+         <TimeZone>Eastern Standard Time</TimeZone>
+      </component>
+   </settings>
+</unattend>
