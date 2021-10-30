@@ -16,3 +16,5 @@ virtualbox-iso: output will be in this color.
 ```
 
 The process is rather long, approx 30 minutes. The import appliance feature for Virtual Box doesn't work so create a new VM and mount the VMDK volume to the VM.
+
+This was tested on a amd64 build. Disregard the x86 architecture in the Autounattended.xml file.
